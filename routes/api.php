@@ -15,14 +15,12 @@ use App\Models\Student;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-  return $request->user();
-});
-
+// Returns a collection of all students
 Route::get('/students', function () {
   return Student::all();
 });
 
+// Student creation via POST endpoint
 Route::post('/students', function () {
   Student::create([
     'studentId' => request('studentId'),
@@ -33,10 +31,24 @@ Route::post('/students', function () {
   ]);
 });
 
+// Use this endpoint to update attendance
 Route::put('/students/{studentId}', function ($id) {
+  request()->validate([
+    'present' => 'required'
+  ]);
 
   $student = Student::find($id);
   $student->update([
     'present' => request('present')
   ]);
+});
+
+// Student deletion endpoint
+Route::delete('/students/{studentId}', function ($id) {
+
+  $student = Student::find($id);
+  $success = $student->delete();
+  return [
+    'success' => $success
+  ];
 });
