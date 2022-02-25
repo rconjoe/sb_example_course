@@ -19399,7 +19399,7 @@ var _hoisted_1 = {
 };
 
 var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("nav", {
-  "class": "p-6 bg-gray-200 flex justify-between mx-4 mb-6 mt-5 rounded lg"
+  "class": "p-6 bg-gray-200 flex justify-between m-5 rounded lg"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": ""
 }, "Attendance Record"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {

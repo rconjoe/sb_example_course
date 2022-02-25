@@ -427,6 +427,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 .fixed {
   position: fixed;
 }
+.m-6 {
+  margin: 1.5rem;
+}
+.m-5 {
+  margin: 1.25rem;
+}
 .mx-4 {
   margin-left: 1rem;
   margin-right: 1rem;
