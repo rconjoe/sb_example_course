@@ -17,7 +17,7 @@
   </style>
 </head>
 
-<body>
+<body class="h-screen bg-gradient-to-b from-gray-500 to-gray-100">
   <div id="app">
     <App />
   </div>
