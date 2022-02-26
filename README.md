@@ -9,15 +9,15 @@
 ## Usage
 Clone repo:
 ```$ git clone https://github.com/rconjoe/sb_example_course```
+```cd sb_example_course```
 
-You will need to use a small docker container to install dependencies:
-```$ cd sb_example_course```
-```chmod +x setup```
-```./setup```
+Install dependencies with docker:
+```docker run --rm --interactive --tty -v $(pwd):/app composer install```
 
-Seed data:
-```./vendor/bin/sail artisan tinker```
-and in tinker:
-```App\Models\Student::factory()->times(50)->create();```
+Start containers:
+```./vendor/bin/sail up -d```
+
+Run migrations:
+```./vendor/bin/sail artisan migrate```
 
 Browse to `http://127.0.0.1`.
