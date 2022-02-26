@@ -21,3 +21,5 @@ Run migrations:
 ```./vendor/bin/sail artisan migrate```
 
 Browse to `http://127.0.0.1`.
+
+Adminer (SQL GUI) is also available on port 8081.
