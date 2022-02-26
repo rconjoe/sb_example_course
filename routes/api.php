@@ -52,3 +52,7 @@ Route::delete('/students/{studentId}', function ($id) {
     'success' => $success
   ];
 });
+
+Route::post('/populateDatabase', function ($amount) {
+  Student::factory()->times($amount)->create();
+});
