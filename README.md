@@ -15,12 +15,12 @@
 - Install Sail dependencies with docker:
 ```docker run --rm -v $(pwd):/opt -w /opt laravelsail/php80-composer:latest composer install```
 
-Start containers:
+- Start containers:
 ```./vendor/bin/sail up -d```
 
-Run migrations:
+- Run migrations:
 ```./vendor/bin/sail artisan migrate```
 
-Browse to `http://127.0.0.1`.
+**Browse to** `http://127.0.0.1`.
 
-Adminer (SQL GUI) is also available on port 8081.
+*Adminer (SQL GUI) is also available on port 8081.*
