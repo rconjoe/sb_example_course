@@ -10,7 +10,7 @@
 - Clone repo:
 ```$ git clone https://github.com/rconjoe/sb_example_course```
 
-```cd sb_example_course```
+- ```cd sb_example_course```
 
 - Install Sail dependencies with docker:
 ```docker run --rm -v $(pwd):/opt -w /opt laravelsail/php80-composer:latest composer install```
