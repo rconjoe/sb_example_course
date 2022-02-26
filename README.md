@@ -4,16 +4,18 @@
 - Laravel, Vue.js/TailwindCSS, MySQL, Docker
 
 ## Requirements:
-- Docker, docker-compose
+- Docker
 
 ## Usage
 Clone repo:
-```git clone https://github.com/rconjoe/sb_example_course```
+```$ git clone https://github.com/rconjoe/sb_example_course```
 
-Start containers:
-```cd sb_example_course && ./vendor/bin/sail up -d```
+You will need to use a small docker container to install dependencies:
+```$ cd sb_example_course```
+```chmod +x setup```
+```./setup```
 
-Scaffold data:
+Seed data:
 ```./vendor/bin/sail artisan tinker```
 and in tinker:
 ```App\Models\Student::factory()->times(50)->create();```
