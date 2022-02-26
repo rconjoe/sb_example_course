@@ -8,7 +8,7 @@
 
 ## Usage
 - Clone repo:
-```$ git clone https://github.com/rconjoe/sb_example_course```
+```git clone https://github.com/rconjoe/sb_example_course```
 
 - ```cd sb_example_course```
 
