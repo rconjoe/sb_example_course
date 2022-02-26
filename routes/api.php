@@ -53,6 +53,6 @@ Route::delete('/students/{studentId}', function ($id) {
   ];
 });
 
-Route::post('/populateDatabase', function ($amount) {
-  Student::factory()->times($amount)->create();
+Route::get('/populateDatabase', function () {
+  Student::factory()->times(30)->create();
 });
