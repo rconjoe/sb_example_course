@@ -1,8 +1,8 @@
 <template>
   <div class="">
-      <nav class="p-6 bg-gray-200 flex justify-between my-5 mx-16 rounded lg">
+    <nav class="p-6 bg-gray-200 flex justify-between my-5 mx-16 rounded lg">
       <div class="">Attendance Record</div>
-      <a href="https://github.com/rconjoe/sb_example_course" class="text-gray-600 no-underline hover:underline">Source</a>
+      <button @click="populateDB" class="bg-blue-500 hover:bg-blue-700 text-white text-xs py-1 px-2 rounded-full">Seed Data</button>
     </nav>
   </div>
       <StudentTable />
@@ -14,6 +14,12 @@ import StudentTable from './StudentTable.vue'
 export default {
   components: {
     StudentTable
-  }
+  },
+  methods: {
+    async populateDB() {
+      await axios.post('127.0.0.1/api/populateDatabase', 30)
+      .catch(err => console.log(err))
+    }
+}
 }
 </script>
