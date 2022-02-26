@@ -10,6 +10,7 @@
 
 <script>
 import StudentTable from './StudentTable.vue'
+import axios from 'axios'
 
 export default {
   components: {
@@ -17,8 +18,9 @@ export default {
   },
   methods: {
     async populateDB() {
-      await axios.post('127.0.0.1/api/populateDatabase', 30)
+      await axios.get('/api/populateDatabase')
       .catch(err => console.log(err))
+      location.reload()
     }
 }
 }
