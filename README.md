@@ -7,12 +7,13 @@
 - Docker
 
 ## Usage
-Clone repo:
+- Clone repo:
 ```$ git clone https://github.com/rconjoe/sb_example_course```
+
 ```cd sb_example_course```
 
-Install dependencies with docker:
-```docker run --rm --interactive --tty -v $(pwd):/app composer install```
+- Install Sail dependencies with docker:
+```docker run --rm -v $(pwd):/opt -w /opt laravelsail/php80-composer:latest composer install```
 
 Start containers:
 ```./vendor/bin/sail up -d```
